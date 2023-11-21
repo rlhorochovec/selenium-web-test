@@ -1,4 +1,4 @@
-package org.example;
+package br.rafaelhorochovec.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Main {
+public class Teste {
     WebDriver driver;
     @BeforeAll
     static void setupAll() {
@@ -20,6 +20,8 @@ public class Main {
     void setup() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--start-maximized");
+        options.addArguments("--incognito");
         driver = new ChromeDriver(options);
     }
 
@@ -29,7 +31,7 @@ public class Main {
     }
 
     @Test
-    void test() {
-        driver.get("https://www.google.com");
+    void test() throws InterruptedException {
+        driver.get("https://rlhorochovec.github.io/qa/");
     }
 }
