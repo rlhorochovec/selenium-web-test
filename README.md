@@ -1,1 +1,2 @@
 # selenium-web-test
+[![selenium-web-test](https://github.com/rlhorochovec/selenium-web-test/actions/workflows/ci.yml/badge.svg)](https://github.com/rlhorochovec/selenium-web-test/actions/workflows/ci.yml)
