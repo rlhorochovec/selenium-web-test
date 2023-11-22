@@ -20,6 +20,12 @@ public class TestRunner {
                 options.addArguments("--remote-allow-origins=*");
                 options.addArguments("--start-maximized");
                 options.addArguments("--incognito");
+                options.addArguments("--headless");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--ignore-certificate-errors");
+                options.addArguments("--disable-extensions");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
                 driver = new ChromeDriver(options);
                 driver.get("https://rlhorochovec.github.io/qa/");
         }
