@@ -3,6 +3,8 @@
 
 Projeto de automação de testes web utilizando Selenium, Cucumber e TestNG, executando via GitHub Actions.
 
+A execução está com o status Failing propositalmente para demonstração do print da tela do cenário que falhou anexado ao relatório.
+
 ## Dependências
 - JDK: 17
 - Apache Maven: 3.6.3
