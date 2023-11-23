@@ -15,9 +15,3 @@ Funcionalidade: Login
       |         | user   | Informe o usuário!             |
       | admin   | user   | Usuário e/ou senha incorretos! |
       |         |        | Informe usuário e senha!       |
-
-  @LoginFailed
-  Cenário: Login failed
-    Dado que inseri usuário "admin" e senha "user"
-    Quando clicar no botão Entrar
-    Então apresentará uma mensagem de "FALHA PROPOSITAL"
