@@ -16,12 +16,8 @@ Funcionalidade: Login
       | admin   | user   | Usuário e/ou senha incorretos! |
       |         |        | Informe usuário e senha!       |
 
-  @LoginValido
-  Esquema do Cenário: Login válido - <logado>
-    Dado que inseri usuário "<usuario>" e senha "<senha>"
+  @LoginFailed
+  Cenário: Login failed
+    Dado que inseri usuário "admin" e senha "user"
     Quando clicar no botão Entrar
-    Então apresentará a home do "<logado>"
-  Exemplos:
-  | usuario | senha  | logado        |
-  | admin   | admin  | Administrador |
-  | user    | user   | Usuário       |
+    Então apresentará uma mensagem de "FALHA PROPOSITAL"
