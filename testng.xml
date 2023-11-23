@@ -3,7 +3,7 @@
 <suite name="selenium-web-test">
     <test name="Login">
         <classes>
-            <class name="br.rafaelhorochovec.selenium.tests.TestRunner"/>
+            <class name="br.rafaelhorochovec.selenium.tests.RunCucumberTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
