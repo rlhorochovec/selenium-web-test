@@ -22,7 +22,7 @@ Baixando as dependências
 Para rodar os testes, rode o seguinte comando
 
 ```bash
-  mvn test
+  mvn clean verify test
 ```
 
 ## Para visualizar o navegador executando comente a linha abaixo no arquivo TestRunner.java:
