@@ -8,7 +8,6 @@
     <artifactId>selenium-web-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- Cucumber -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>7.14.0</cucumber.version>
@@ -20,6 +19,7 @@
         <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
         <maven.compiler.source.version>17</maven.compiler.source.version>
         <maven.compiler.target.version>17</maven.compiler.target.version>
+        <maven.cucumber.reporting.version>5.7.4</maven.cucumber.reporting.version>
     </properties>
 
     <dependencies>
@@ -35,6 +35,13 @@
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Report -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${maven.cucumber.reporting.version}</version>
         </dependency>
 
         <!-- Selenium -->
@@ -56,7 +63,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!-- Apache Common -->
@@ -65,14 +72,6 @@
             <artifactId>org.apache.commons.io</artifactId>
             <version>${apache.common.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-
     </dependencies>
 
     <build>
@@ -91,10 +90,42 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>${maven.cucumber.reporting.version}</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>selenium-web-test</projectName>
+                            <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
+                            <skip>false</skip>
+                            <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                            <parallelTesting>false</parallelTesting>
+                            <!-- optional, set true to group features by its Ids -->
+                            <mergeFeaturesById>false</mergeFeaturesById>
+                            <!-- optional, set true to get a final report with latest results of the same test from different test runs -->
+                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+                            <!-- optional, set true to fail build on test failures -->
+                            <checkBuildResult>false</checkBuildResult>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

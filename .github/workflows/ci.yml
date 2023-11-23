@@ -22,4 +22,16 @@ jobs:
              ./scripts/InstallChrome.sh
 
       - name: Build and Run Tests with Maven
-        run: mvn -B clean test
+        run: mvn -B clean verify test
+
+      - name: Copy test execution videos & screenshots
+        run: |
+          mkdir public
+          cp -r target/cucumber-report-html public/reports
+
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
