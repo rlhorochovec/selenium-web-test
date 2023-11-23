@@ -15,7 +15,15 @@ public class DriverUtil {
     private DriverUtil() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
         options.addArguments("--start-maximized");
+        options.addArguments("--incognito");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
         openPage("https://rlhorochovec.github.io/qa/");
