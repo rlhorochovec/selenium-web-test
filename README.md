@@ -3,7 +3,7 @@
 
 Projeto de automação de testes web utilizando Selenium, Cucumber e TestNG, executando via GitHub Actions e relatório do GitHub Pages.
 
-Foi adicionado um cenário com uma falha propostial para demonstrar o screenshot no relatório publicado.
+Foi adicionado um cenário com uma falha proposital para demonstrar o screenshot no relatório publicado.
 
 ## Dependências
 - JDK: 17
