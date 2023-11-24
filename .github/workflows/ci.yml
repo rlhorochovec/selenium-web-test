@@ -26,10 +26,16 @@ jobs:
         env:
           CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
 
+      - name: Copy test execution videos & screenshots
+        run: |
+          mkdir public
+          cp -r target/cucumber-report-html/cucumber-html-reports public/reports
+          
       - name: Publish Cucumber Report
         if: always() # We want this to always run, even if test fail prior to this step running
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/cucumber-report-html/cucumber-html-reports/ # This is where index.html will be output
+          publish_dir: ./public
+          publish_branch: gh-pages
           
