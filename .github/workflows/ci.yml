@@ -22,6 +22,14 @@ jobs:
              ./scripts/InstallChrome.sh
 
       - name: Build and Run Tests with Maven
-        run: mvn -B clean verify test
+        run: mvn clean verify test
         env:
           CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
+          
+      - name: Publish Cucumber Report
+        if: always() # We want this to always run, even if test fail prior to this step running
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/cucumber-report-html/cucumber-html-reports
+          publish_branch: gh-pages
