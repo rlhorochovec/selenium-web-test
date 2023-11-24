@@ -1,9 +1,9 @@
 # selenium-web-test
 [![selenium-web-test](https://github.com/rlhorochovec/selenium-web-test/actions/workflows/ci.yml/badge.svg)](https://github.com/rlhorochovec/selenium-web-test/actions/workflows/ci.yml)
 
-Projeto de automação de testes web utilizando Selenium, Cucumber e TestNG, executando via GitHub Actions.
+Projeto de automação de testes web utilizando Selenium, Cucumber e TestNG, executando via GitHub Actions e relatório do GitHub Pages.
 
-A execução está com o status Failing propositalmente para demonstração do print da tela do cenário que falhou anexado ao relatório.
+Foi adicionado um cenário com uma falha propostial para demonstrar o screenshot no relatório publicado.
 
 ## Dependências
 - JDK: 17
@@ -29,7 +29,7 @@ Para rodar os testes, rode o seguinte comando
   mvn clean verify test
 ```
 ## Relatório dos testes
-target/cucumber-report-html
+[Visualizar](https://rlhorochovec.github.io/selenium-web-test/overview-features.html)
 
 ## Demonstração
 [Assistir vídeo da execução](https://youtu.be/_VEq6Eodp60)
