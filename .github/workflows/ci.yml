@@ -23,3 +23,5 @@ jobs:
 
       - name: Build and Run Tests with Maven
         run: mvn -B clean verify test
+        env:
+          CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
