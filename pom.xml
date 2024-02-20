@@ -11,15 +11,15 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>7.14.0</cucumber.version>
-        <selenium.version>4.14.0</selenium.version>
-        <webdrivermanager.version>5.5.3</webdrivermanager.version>
-        <testng.version>7.8.0</testng.version>
+        <selenium.version>4.18.0</selenium.version>
+        <webdrivermanager.version>5.6.4</webdrivermanager.version>
+        <testng.version>7.9.0</testng.version>
         <apache.common.version>2.4</apache.common.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
         <maven.compiler.source.version>17</maven.compiler.source.version>
         <maven.compiler.target.version>17</maven.compiler.target.version>
-        <maven.cucumber.reporting.version>5.7.4</maven.cucumber.reporting.version>
+        <maven.cucumber.reporting.version>5.7.8</maven.cucumber.reporting.version>
     </properties>
 
     <dependencies>
@@ -50,12 +50,28 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
 
         <!-- Web Driver Manager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- TestNG -->
