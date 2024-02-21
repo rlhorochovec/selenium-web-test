@@ -36,8 +36,3 @@ Para rodar os testes, rode o seguinte comando
 <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/projeto.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/mvn_clean_verify_test.png" width="400" />
 <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_local_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_local_2.png" width="400" />
 <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_report_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_report_2.png" width="400" />
-
-## Para visualizar o navegador executando comente a linha abaixo no arquivo br.rafaelhorochovec.selenium.core.DriverUtil:
-```bash
-options.addArguments("--headless");
-```

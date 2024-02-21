@@ -18,7 +18,7 @@ public class DriverUtil {
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--start-maximized");
         options.addArguments("--incognito");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--disable-gpu");
