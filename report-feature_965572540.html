@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>selenium-web-test</td>
         <td>1</td>
-      <td>29 Nov 2023, 22:22</td>
+      <td>21 Feb 2024, 00:02</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Login</td>
-          <td      class="passed"    >12</td>
           <td >0</td>
           <td >0</td>
+          <td     class="skipped"   >12</td>
           <td >0</td>
           <td >0</td>
           <td class="total">12</td>
 
-          <td  class="passed"    >4</td>
           <td >0</td>
+          <td  class="failed"    >4</td>
           <td class="total">4</td>
 
-          <td class="duration" data-value="739896556">0.739</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="1634704">0.001</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Funcionalidade</span>
   <span class="name">Login</span>
 
@@ -195,12 +195,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.199</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Esquema do Cen&aacute;rio</span>
   <span class="name">Login inv&aacute;lido - Informe a senha!</span>
 
@@ -211,13 +211,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#before-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -227,17 +227,52 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-2" class="inner-level collapse collapsable-details ">
+    <div id="before-2" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">Before</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">2.127</span>
+  <span class="lead-duration duration">1.876</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>Error message</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fv-az975-113', ip: '10.1.0.83'
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1019-azure', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --start-maximized, --incognito, --no-sandbox, --ignore-certificate-errors, --disable-gpu, --disable-extensions, --disable-dev-shm-usage], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.&lt;init&gt;(DriverUtil.java:27)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.setUpDriver(DriverUtil.java:42)
+	at br.rafaelhorochovec.selenium.steps.Hooks.setUp(Hooks.java:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -250,9 +285,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -262,15 +297,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Dado passed">
+<div class="brief step-name-Dado skipped">
   <span class="keyword indention">Dado</span>
   <span class="name">que inseri usu&aacute;rio <span class="argument">&quot;admin&quot;</span> e senha <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">0.146</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -293,11 +328,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Quando passed">
+<div class="brief step-name-Quando skipped">
   <span class="keyword indention">Quando</span>
   <span class="name">clicar no bot&atilde;o Entrar</span>
 
-  <span class="lead-duration duration">0.030</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -320,11 +355,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Ent&amp;atilde;o passed">
+<div class="brief step-name-Ent&amp;atilde;o skipped">
   <span class="keyword indention">Ent&atilde;o</span>
   <span class="name">apresentar&aacute; uma mensagem de <span class="argument">&quot;Informe a senha!&quot;</span></span>
 
-  <span class="lead-duration duration">0.022</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -351,9 +386,9 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -363,17 +398,30 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">After</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.113</span>
+  <span class="lead-duration duration">0.001</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>Error message</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because the return value of &quot;br.rafaelhorochovec.selenium.core.DriverUtil.getDriver()&quot; is null
+	at br.rafaelhorochovec.selenium.steps.Hooks.tearDown(Hooks.java:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -396,12 +444,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.180</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Esquema do Cen&aacute;rio</span>
   <span class="name">Login inv&aacute;lido - Informe o usu&aacute;rio!</span>
 
@@ -412,13 +460,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#before-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -428,17 +476,52 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-6" class="inner-level collapse collapsable-details ">
+    <div id="before-8" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">Before</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.518</span>
+  <span class="lead-duration duration">0.253</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>Error message</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fv-az975-113', ip: '10.1.0.83'
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1019-azure', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --start-maximized, --incognito, --no-sandbox, --ignore-certificate-errors, --disable-gpu, --disable-extensions, --disable-dev-shm-usage], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.&lt;init&gt;(DriverUtil.java:27)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.setUpDriver(DriverUtil.java:42)
+	at br.rafaelhorochovec.selenium.steps.Hooks.setUp(Hooks.java:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -451,9 +534,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-10">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -463,15 +546,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-10" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Dado passed">
+<div class="brief step-name-Dado skipped">
   <span class="keyword indention">Dado</span>
   <span class="name">que inseri usu&aacute;rio <span class="argument">&quot;&quot;</span> e senha <span class="argument">&quot;user&quot;</span></span>
 
-  <span class="lead-duration duration">0.130</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -494,11 +577,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Quando passed">
+<div class="brief step-name-Quando skipped">
   <span class="keyword indention">Quando</span>
   <span class="name">clicar no bot&atilde;o Entrar</span>
 
-  <span class="lead-duration duration">0.029</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -521,11 +604,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Ent&amp;atilde;o passed">
+<div class="brief step-name-Ent&amp;atilde;o skipped">
   <span class="keyword indention">Ent&atilde;o</span>
   <span class="name">apresentar&aacute; uma mensagem de <span class="argument">&quot;Informe o usu&aacute;rio!&quot;</span></span>
 
-  <span class="lead-duration duration">0.020</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -552,9 +635,9 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-11">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -564,17 +647,30 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-8" class="inner-level collapse collapsable-details ">
+    <div id="after-11" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">After</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.105</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>Error message</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because the return value of &quot;br.rafaelhorochovec.selenium.core.DriverUtil.getDriver()&quot; is null
+	at br.rafaelhorochovec.selenium.steps.Hooks.tearDown(Hooks.java:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -597,12 +693,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.186</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Esquema do Cen&aacute;rio</span>
   <span class="name">Login inv&aacute;lido - Usu&aacute;rio e/ou senha incorretos!</span>
 
@@ -613,13 +709,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-9" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#before-14">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -629,17 +725,52 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-10" class="inner-level collapse collapsable-details ">
+    <div id="before-14" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">Before</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.255</span>
+  <span class="lead-duration duration">0.150</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>Error message</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fv-az975-113', ip: '10.1.0.83'
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1019-azure', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --start-maximized, --incognito, --no-sandbox, --ignore-certificate-errors, --disable-gpu, --disable-extensions, --disable-dev-shm-usage], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.&lt;init&gt;(DriverUtil.java:27)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.setUpDriver(DriverUtil.java:42)
+	at br.rafaelhorochovec.selenium.steps.Hooks.setUp(Hooks.java:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -652,9 +783,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-16">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -664,15 +795,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-16" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Dado passed">
+<div class="brief step-name-Dado skipped">
   <span class="keyword indention">Dado</span>
   <span class="name">que inseri usu&aacute;rio <span class="argument">&quot;admin&quot;</span> e senha <span class="argument">&quot;user&quot;</span></span>
 
-  <span class="lead-duration duration">0.136</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -695,11 +826,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Quando passed">
+<div class="brief step-name-Quando skipped">
   <span class="keyword indention">Quando</span>
   <span class="name">clicar no bot&atilde;o Entrar</span>
 
-  <span class="lead-duration duration">0.030</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -722,11 +853,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Ent&amp;atilde;o passed">
+<div class="brief step-name-Ent&amp;atilde;o skipped">
   <span class="keyword indention">Ent&atilde;o</span>
   <span class="name">apresentar&aacute; uma mensagem de <span class="argument">&quot;Usu&aacute;rio e/ou senha incorretos!&quot;</span></span>
 
-  <span class="lead-duration duration">0.020</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -753,9 +884,9 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-17">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -765,17 +896,30 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-12" class="inner-level collapse collapsable-details ">
+    <div id="after-17" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">After</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.105</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>Error message</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because the return value of &quot;br.rafaelhorochovec.selenium.core.DriverUtil.getDriver()&quot; is null
+	at br.rafaelhorochovec.selenium.steps.Hooks.tearDown(Hooks.java:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -798,12 +942,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.172</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Esquema do Cen&aacute;rio</span>
   <span class="name">Login inv&aacute;lido - Informe usu&aacute;rio e senha!</span>
 
@@ -814,13 +958,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-13" class="collapse collapsable-details ">
+  <div id="element-19" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-14">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#before-20">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -830,17 +974,52 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-14" class="inner-level collapse collapsable-details ">
+    <div id="before-20" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">Before</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.247</span>
+  <span class="lead-duration duration">0.148</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
+          <a>Error message</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fv-az975-113', ip: '10.1.0.83'
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1019-azure', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, --start-maximized, --incognito, --no-sandbox, --ignore-certificate-errors, --disable-gpu, --disable-extensions, --disable-dev-shm-usage], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.&lt;init&gt;(DriverUtil.java:27)
+	at br.rafaelhorochovec.selenium.core.DriverUtil.setUpDriver(DriverUtil.java:42)
+	at br.rafaelhorochovec.selenium.steps.Hooks.setUp(Hooks.java:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -853,9 +1032,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -865,15 +1044,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
+  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Dado passed">
+<div class="brief step-name-Dado skipped">
   <span class="keyword indention">Dado</span>
   <span class="name">que inseri usu&aacute;rio <span class="argument">&quot;&quot;</span> e senha <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">0.123</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -896,11 +1075,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Quando passed">
+<div class="brief step-name-Quando skipped">
   <span class="keyword indention">Quando</span>
   <span class="name">clicar no bot&atilde;o Entrar</span>
 
-  <span class="lead-duration duration">0.030</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -923,11 +1102,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Ent&amp;atilde;o passed">
+<div class="brief step-name-Ent&amp;atilde;o skipped">
   <span class="keyword indention">Ent&atilde;o</span>
   <span class="name">apresentar&aacute; uma mensagem de <span class="argument">&quot;Informe usu&aacute;rio e senha!&quot;</span></span>
 
-  <span class="lead-duration duration">0.019</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -954,9 +1133,9 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-23">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -966,17 +1145,30 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-16" class="inner-level collapse collapsable-details ">
+    <div id="after-23" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief failed">
             <span class="keyword indention">After</span>
               <span class="location name">br.rafaelhorochovec.selenium.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.106</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+          <a>Error message</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details  in ">
+        <pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because the return value of &quot;br.rafaelhorochovec.selenium.core.DriverUtil.getDriver()&quot; is null
+	at br.rafaelhorochovec.selenium.steps.Hooks.tearDown(Hooks.java:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
