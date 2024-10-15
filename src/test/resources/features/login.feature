@@ -4,6 +4,16 @@ Funcionalidade: Login
   Desejo realizar o login no sistema
   Para realizar minhas tarefas
 
+  @LoginValido
+  Esquema do Cenário: Login válido
+    Dado que inseri usuário "<usuario>" e senha "<senha>"
+    Quando clicar no botão Entrar
+    Então apresentará a home do "<logado>"
+    Exemplos:
+      | usuario | senha  | logado        |
+      | admin   | admin  | Administrador |
+      | user    | user   | Usuário       |
+
   @LoginInvalido
   Esquema do Cenário: Login inválido - <mensagem>
     Dado que inseri usuário "<usuario>" e senha "<senha>"

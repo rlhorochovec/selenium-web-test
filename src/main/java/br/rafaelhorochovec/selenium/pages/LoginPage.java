@@ -25,7 +25,6 @@ public class LoginPage {
     public void efetuarLogin(String usuario, String senha) {
         loginLocators.login.sendKeys(usuario);
         loginLocators.senha.sendKeys(senha);
-        loginLocators.entrar.click();
     }
 
     public void clicarEntrar() {

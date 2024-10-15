@@ -19,5 +19,4 @@ public class HomePage {
         String titulo = homeLocators.titulo.getText();
         assertEquals(titulo, logado);
     }
-
 }
