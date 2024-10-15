@@ -21,7 +21,7 @@ public class CucumberRunnerTests extends AbstractTestNGCucumberTests {
         ConfigReader.setBrowserType(browser);
     }
 
-    @DataProvider
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }
