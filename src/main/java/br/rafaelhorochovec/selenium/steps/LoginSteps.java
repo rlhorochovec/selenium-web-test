@@ -13,10 +13,12 @@ public class LoginSteps {
     public void que_inseri_usuário_e_senha(String usuario, String senha) {
         loginPage.efetuarLogin(usuario, senha);
     }
+
     @Quando("clicar no botão Entrar")
     public void clicar_no_botão_entrar() {
         loginPage.clicarEntrar();
     }
+
     @Então("apresentará uma mensagem de {string}")
     public void apresentará_uma_mensagem_de(String mensagem) {
         loginPage.validarMensagem(mensagem);

@@ -5,6 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomeLocators {
 
-    @FindBy(id = "h2")
+    @FindBy(xpath = "//*/div/div/div/h1")
     public WebElement titulo;
 }
