@@ -33,6 +33,6 @@ Para rodar os testes, rode o seguinte comando
 [Assistir vídeo da execução](https://youtu.be/_VEq6Eodp60)
 
 ## Screenshots
-<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/projeto.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/mvn_clean_verify_test.png" width="400" />
-<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_local_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_local_2.png" width="400" />
-<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_report_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/Screenshots/cucumber_report_2.png" width="400" />
+<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/projeto.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/mvn_clean_verify_test.png" width="400" />
+<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/cucumber_local_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/cucumber_local_2.png" width="400" />
+<img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/cucumber_report_1.png" width="400" /> <img src="https://github.com/rlhorochovec/selenium-web-test/blob/develop/screenshots/cucumber_report_2.png" width="400" />

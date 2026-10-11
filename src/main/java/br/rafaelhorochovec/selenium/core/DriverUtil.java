@@ -1,15 +1,16 @@
 package br.rafaelhorochovec.selenium.core;
 
-import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.time.Duration;
 
 public class DriverUtil {
 
     private static DriverUtil driverUtil;
-    private static WebDriver driver;
+    public static WebDriver driver;
     public final static int TIMEOUT = 5;
 
     private DriverUtil() {
