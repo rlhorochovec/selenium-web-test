@@ -2,7 +2,9 @@ name: Testes Web com Selenium e Java
 
 on:
   push:
-    branches: [ "develop", "main" ]
+    branches:
+      - develop
+      - main
   workflow_dispatch:
 
 jobs:
